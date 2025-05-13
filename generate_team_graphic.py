@@ -127,7 +127,7 @@ def get_sprite_path(pokedex_number):
     else:
         return f"assets/sprites/{pokedex_number.zfill(4)}.png"
 
-def create_pokemon_graphic(pokemon, image, scale=2.0):
+def create_pokemon_graphic(pokemon, image, scale=0.85):
     """Draw Pokémon information directly onto the provided image object, scaled by the given factor."""
     draw = ImageDraw.Draw(image)
 

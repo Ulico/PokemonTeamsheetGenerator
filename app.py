@@ -29,16 +29,17 @@ Tera Type: Electric
 etc..."""
 )
 
+# Add a better error message for invalid team data
 if team_data:
-    # Save the pasted data
-    team_file_path.write_text(team_data, encoding='utf-8')
-    st.success("Team data saved successfully!")
+    try:
+        # Save the pasted data
+        team_file_path.write_text(team_data, encoding='utf-8')
+        st.success("Team data saved successfully!")
 
-    if st.button("Generate Teamsheet Graphic"):
-        try:
-            # Parse and create the teamsheet
-            team = parse_team_file(team_file_path)
-            if team:
+        if st.button("Generate Teamsheet Graphic"):
+            try:
+                # Parse and create the teamsheet
+                team = parse_team_file(team_file_path)
                 create_teamsheet(team, output_image_path)
 
                 if output_image_path.exists():
@@ -53,10 +54,10 @@ if team_data:
                         )
                 else:
                     st.error("Failed to generate teamsheet graphic. Please check the script.")
-            else:
-                st.error("Failed to parse team data. Please check the input format.")
-        except Exception as e:
-            st.error(f"An error occurred: {e}")
+            except Exception as e:
+                st.error("Failed to parse team data. Please ensure the input format is correct.")
+    except Exception as e:
+        st.error(f"An error occurred while saving the team data: {e}")
 
 # Footer
 st.markdown("---")
