@@ -17,7 +17,7 @@ st.title("Pokémon Teamsheet Graphic Generator")
 team_data = st.text_area(
     "Paste your team data below:", 
     height=300,
-    value="""Pikachu (F) @ Light Ball
+    placeholder="""Pikachu (F) @ Light Ball
 Ability: Static
 Level: 50
 Tera Type: Electric
