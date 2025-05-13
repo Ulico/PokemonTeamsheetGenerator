@@ -13,8 +13,21 @@ output_image_path = BASE_DIR / "teamsheet.png"
 # Set the title of the app
 st.title("Pokémon Teamsheet Graphic Generator")
 
-# Text area for pasting team data
-team_data = st.text_area("Paste your team data below:", height=300)
+# Update the template example for team_data using README.md example
+team_data = st.text_area(
+    "Paste your team data below:", 
+    height=300,
+    value="""Pikachu (F) @ Light Ball
+Ability: Static
+Level: 50
+Tera Type: Electric
+- Thunderbolt
+- Quick Attack
+- Iron Tail
+- Protect
+
+etc..."""
+)
 
 if team_data:
     # Save the pasted data
