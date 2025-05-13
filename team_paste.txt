@@ -1,0 +1,72 @@
+CareBear (Urshifu-Rapid-Strike) @ Mirror Herb  
+Ability: Unseen Fist  
+Level: 50  
+Tera Type: Steel  
+EVs: 188 HP / 156 Atk / 4 Def / 60 SpD / 100 Spe  
+Adamant Nature  
+- Surging Strikes  
+- Body Press  
+- Iron Defense  
+- Detect  
+
+Tapu Chulu (Raichu) @ Focus Sash  
+Ability: Lightning Rod  
+Level: 50  
+Tera Type: Electric  
+EVs: 164 Def / 108 SpA / 236 Spe  
+Timid Nature  
+- Fake Out  
+- Rain Dance  
+- Light Screen  
+- Volt Switch  
+
+RIP (Iron Jugulis) @ Covert Cloak  
+Ability: Quark Drive  
+Level: 50  
+Tera Type: Dark  
+EVs: 108 HP / 4 Def / 20 SpA / 132 SpD / 244 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Dark Pulse  
+- Flash Cannon  
+- Scary Face  
+- Taunt  
+
+Tsara Palin (Tsareena) @ Yache Berry  
+Ability: Queenly Majesty  
+Level: 50  
+Shiny: Yes  
+Tera Type: Grass  
+EVs: 188 HP / 4 Atk / 4 Def / 60 SpD / 252 Spe  
+Adamant Nature  
+- Power Whip  
+- Triple Axel  
+- Knock Off  
+- Protect  
+
+Glimmstone (Glimmora) @ Passho Berry  
+Ability: Toxic Debris  
+Level: 50  
+Shiny: Yes  
+Tera Type: Psychic  
+EVs: 84 HP / 4 Def / 236 SpA / 4 SpD / 180 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Sludge Bomb  
+- Energy Ball  
+- Earth Power  
+- Spiky Shield  
+
+JuniorJr (Glaceon) @ Sitrus Berry  
+Ability: Snow Cloak  
+Level: 50  
+Shiny: Yes  
+Tera Type: Ice  
+EVs: 252 HP / 44 Def / 76 SpA / 124 SpD / 12 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Freeze-Dry  
+- Chilling Water  
+- Yawn  
+- Protect  
+
