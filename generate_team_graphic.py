@@ -299,6 +299,8 @@ def create_pokemon_graphic(pokemon, image, scale=2.0):
 
 def create_teamsheet(team, output_path):
     """Create a full teamsheet with 6 Pokémon boxes arranged in a 3x2 table."""
+
+    print(BASE_PATH)
     # Load the background image
     background = Image.open(BASE_PATH / "assets/images/battle.jpg").convert("RGBA")
     sheet_width, sheet_height = background.size  # Match the dimensions of the background image
