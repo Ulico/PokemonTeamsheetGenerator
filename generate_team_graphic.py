@@ -306,14 +306,12 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
 def create_teamsheet(team, output_path):
     """Create a full teamsheet with 6 Pokémon boxes arranged in a 3x2 table."""
     # Load the background image
-    background = Image.open("assets/images/battle.JPG").convert("RGBA")
+    background = Image.open("assets/images/battle.JPG")
     sheet_width, sheet_height = background.size  # Match the dimensions of the background image
 
     # Create a blank image for the teamsheet with a solid black background
-    teamsheet = Image.new("RGBA", (sheet_width, sheet_height), (0, 0, 0, 255))  # Solid black background
+    teamsheet = Image.new("RGBA", (sheet_width, sheet_height))  # Solid black background
     teamsheet.paste(background, (0, 0))  # Add the background image
-
-    draw = ImageDraw.Draw(teamsheet)
 
     # Calculate the grid layout dynamically based on the background dimensions
     box_width, box_height = int(500 * 1.2), int(140 * 1.2)  # Adjusted dimensions for the boxes
@@ -331,7 +329,7 @@ def create_teamsheet(team, output_path):
         y_offset = y_offset_start + (i // 2) * (box_height + vertical_spacing)
 
         # Create a blank box for the Pokémon with a semi-transparent tint
-        box = Image.new("RGBA", (box_width, box_height), (0, 0, 0, 252))  # Semi-transparent black tint
+        box = Image.new("RGBA", (box_width, box_height))  # Semi-transparent black tint
 
         # Create a mask for rounded corners with a smaller radius
         mask = Image.new("L", (box_width, box_height), 0)
