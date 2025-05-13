@@ -237,10 +237,15 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
     tera_icon_size = (int(type_icon_size[0]), int(type_icon_size[1]))
     tera_icon_path = f"assets/types/{pokemon.tera_type.lower()}.png"
     try:
-        tera_icon = Image.open(tera_icon_path).resize((int(tera_icon_size[0]), int(tera_icon_size[1])))
+        tera_icon = Image.open(tera_icon_path).convert("RGBA").resize((int(tera_icon_size[0]), int(tera_icon_size[1])))
+
+        if pokemon.tera_type.lower() == "none":
+            # Adjust opacity to 50% for none.png
+            tera_icon = Image.eval(tera_icon, lambda p: p // 2 if p > 0 else p)
+
         tera_x_offset = x_offset + int(10 * scale)
         tera_y_offset = y_offset - (tera_icon_size[1] - type_icon_size[1]) // 2
-        image.paste(tera_icon, (tera_x_offset, int(tera_y_offset)), tera_icon)
+        image.paste(tera_icon, (tera_x_offset, int(tera_y_offset)), tera_icon.split()[3])
         x_offset += int(50 * scale)
     except FileNotFoundError:
         print(f"Tera type icon not found: {tera_icon_path}")
