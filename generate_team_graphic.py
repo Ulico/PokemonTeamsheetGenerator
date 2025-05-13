@@ -54,9 +54,9 @@ def parse_team_file(file_path):
                     name = name_item_line.strip()
 
                 # Initialize default values
-                ability = None
+                ability = 'None'
                 level = 100  # Default to level 100 if not found
-                tera_type = None
+                tera_type = 'None'
                 moves = []
 
                 # Parse subsequent lines
