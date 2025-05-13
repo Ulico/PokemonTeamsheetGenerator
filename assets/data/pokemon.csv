@@ -2,27 +2,27 @@ Number,Name,Type 1,Type 2
 1,Bulbasaur,Grass,Poison
 2,Ivysaur,Grass,Poison
 3,Venusaur,Grass,Poison
-3_01,Mega Venusaur,Grass,Poison
+3_01,Venusaur-Mega,Grass,Poison
 4,Charmander,Fire,
 5,Charmeleon,Fire,
 6,Charizard,Fire,Flying
-6_01,Mega Charizard X,Fire,Dragon
-6_02,Mega Charizard Y,Fire,Flying
+6_01,Charizard X-Mega,Fire,Dragon
+6_02,Charizard Y-Mega,Fire,Flying
 7,Squirtle,Water,
 8,Wartortle,Water,
 9,Blastoise,Water,
-9_01,Mega Blastoise,Water,
+9_01,Blastoise-Mega,Water,
 10,Caterpie,Bug,
 11,Metapod,Bug,
 12,Butterfree,Bug,Flying
 13,Weedle,Bug,Poison
 14,Kakuna,Bug,Poison
 15,Beedrill,Bug,Poison
-15_01,Mega Beedrill,Bug,Poison
+15_01,Beedrill-Mega,Bug,Poison
 16,Pidgey,Normal,Flying
 17,Pidgeotto,Normal,Flying
 18,Pidgeot,Normal,Flying
-18_01,Mega Pidgeot,Normal,Flying
+18_01,Pidgeot-Mega,Normal,Flying
 19,Rattata,Normal,
 19_01,Rattata-Alola,Dark,Normal
 20,Raticate,Normal,
@@ -84,7 +84,7 @@ Number,Name,Type 1,Type 2
 63,Abra,Psychic,
 64,Kadabra,Psychic,
 65,Alakazam,Psychic,
-65_01,Mega Alakazam,Psychic,
+65_01,Alakazam-Mega,Psychic,
 66,Machop,Fighting,
 67,Machoke,Fighting,
 68,Machamp,Fighting,
@@ -106,7 +106,7 @@ Number,Name,Type 1,Type 2
 79,Slowpoke,Water,Psychic
 079_01,Slowpoke-Galar,Psychic,
 80,Slowbro,Water,Psychic
-80_01,Mega Slowbro,Water,Psychic
+80_01,Slowbro-Mega,Water,Psychic
 080_01,Slowbro-Galar,Psychic,Poison
 81,Magnemite,Electric,Steel
 82,Magneton,Electric,Steel
@@ -125,7 +125,7 @@ Number,Name,Type 1,Type 2
 92,Gastly,Ghost,Poison
 93,Haunter,Ghost,Poison
 94,Gengar,Ghost,Poison
-94_01,Mega Gengar,Ghost,Poison
+94_01,Gengar-Mega,Ghost,Poison
 95,Onix,Rock,Ground
 96,Drowzee,Psychic,
 97,Hypno,Psychic,
@@ -152,7 +152,7 @@ Number,Name,Type 1,Type 2
 113,Chansey,Normal,
 114,Tangela,Grass,
 115,Kangaskhan,Normal,
-115_01,Mega Kangaskhan,Normal,
+115_01,Kangaskhan-Mega,Normal,
 116,Horsea,Water,
 117,Seadra,Water,
 118,Goldeen,Water,
@@ -166,14 +166,14 @@ Number,Name,Type 1,Type 2
 125,Electabuzz,Electric,
 126,Magmar,Fire,
 127,Pinsir,Bug,
-127_01,Mega Pinsir,Bug,Flying
+127_01,Pinsir-Mega,Bug,Flying
 128,Tauros,Normal,
 128_01,Tauros-Paldea,Fighting,
 128_02,Tauros-Paldea-Fire,Fighting,Fire
 128_03,Tauros-Paldea-Water,Fighting,Water
 129,Magikarp,Water,
 130,Gyarados,Water,Flying
-130_01,Mega Gyarados,Water,Dark
+130_01,Gyarados-Mega,Water,Dark
 131,Lapras,Water,Ice
 132,Ditto,Normal,
 133,Eevee,Normal,
@@ -186,7 +186,7 @@ Number,Name,Type 1,Type 2
 140,Kabuto,Rock,Water
 141,Kabutops,Rock,Water
 142,Aerodactyl,Rock,Flying
-142_01,Mega Aerodactyl,Rock,Flying
+142_01,Aerodactyl-Mega,Rock,Flying
 143,Snorlax,Normal,
 144,Articuno,Ice,Flying
 144_01,Articuno-Galar,Psychic,Flying
@@ -198,8 +198,8 @@ Number,Name,Type 1,Type 2
 148,Dragonair,Dragon,
 149,Dragonite,Dragon,Flying
 150,Mewtwo,Psychic,
-150_01,Mega Mewtwo X,Psychic,Fighting
-150_02,Mega Mewtwo Y,Psychic,
+150_01,Mewtwo X-Mega,Psychic,Fighting
+150_02,Mewtwo Y-Mega,Psychic,
 151,Mew,Psychic,
 152,Chikorita,Grass,
 153,Bayleef,Grass,
@@ -232,7 +232,7 @@ Number,Name,Type 1,Type 2
 179,Mareep,Electric,
 180,Flaaffy,Electric,
 181,Ampharos,Electric,
-181_01,Mega Ampharos,Electric,Dragon
+181_01,Ampharos-Mega,Electric,Dragon
 182,Bellossom,Grass,
 183,Marill,Water,Fairy
 184,Azumarill,Water,Fairy
@@ -262,16 +262,16 @@ Number,Name,Type 1,Type 2
 206,Dunsparce,Normal,
 207,Gligar,Ground,Flying
 208,Steelix,Ground,Steel
-208_01,Mega Steelix,Ground,Steel
+208_01,Steelix-Mega,Ground,Steel
 209,Snubbull,Fairy,
 210,Granbull,Fairy,
 211,Qwilfish,Water,Poison
 211_01,Qwilfish-Hisui,Dark,Poison
 212,Scizor,Bug,Steel
-212_01,Mega Scizor,Bug,Steel
+212_01,Scizor-Mega,Bug,Steel
 213,Shuckle,Bug,Rock
 214,Heracross,Bug,Fighting
-214_01,Mega Heracross,Bug,Fighting
+214_01,Heracross-Mega,Bug,Fighting
 215,Sneasel,Dark,Ice
 215_01,Sneasel-Hisui,Fighting,Poison
 216,Teddiursa,Normal,
@@ -289,7 +289,7 @@ Number,Name,Type 1,Type 2
 227,Skarmory,Steel,Flying
 228,Houndour,Dark,Fire
 229,Houndoom,Dark,Fire
-229_01,Mega Houndoom,Dark,Fire
+229_01,Houndoom-Mega,Dark,Fire
 230,Kingdra,Water,Dragon
 231,Phanpy,Ground,
 232,Donphan,Ground,
@@ -309,22 +309,22 @@ Number,Name,Type 1,Type 2
 246,Larvitar,Rock,Ground
 247,Pupitar,Rock,Ground
 248,Tyranitar,Rock,Dark
-248_01,Mega Tyranitar,Rock,Dark
+248_01,Tyranitar-Mega,Rock,Dark
 249,Lugia,Psychic,Flying
 250,Ho-Oh,Fire,Flying
 251,Celebi,Grass,Psychic
 252,Treecko,Grass,
 253,Grovyle,Grass,
 254,Sceptile,Grass,
-254_01,Mega Sceptile,Grass,Dragon
+254_01,Sceptile-Mega,Grass,Dragon
 255,Torchic,Fire,
 256,Combusken,Fire,Fighting
 257,Blaziken,Fire,Fighting
-257_01,Mega Blaziken,Fire,Fighting
+257_01,Blaziken-Mega,Fire,Fighting
 258,Mudkip,Water,
 259,Marshtomp,Water,Ground
 260,Swampert,Water,Ground
-260_01,Mega Swampert,Water,Ground
+260_01,Swampert-Mega,Water,Ground
 261,Poochyena,Dark,
 262,Mightyena,Dark,
 263,Zigzagoon,Normal,
@@ -349,7 +349,7 @@ Number,Name,Type 1,Type 2
 280,Ralts,Psychic,Fairy
 281,Kirlia,Psychic,Fairy
 282,Gardevoir,Psychic,Fairy
-282_01,Mega Gardevoir,Psychic,Fairy
+282_01,Gardevoir-Mega,Psychic,Fairy
 283,Surskit,Bug,Water
 284,Masquerain,Bug,Flying
 285,Shroomish,Grass,
@@ -370,19 +370,19 @@ Number,Name,Type 1,Type 2
 300,Skitty,Normal,
 301,Delcatty,Normal,
 302,Sableye,Dark,Ghost
-302_01,Mega Sableye,Dark,Ghost
+302_01,Sableye-Mega,Dark,Ghost
 303,Mawile,Steel,Fairy
-303_01,Mega Mawile,Steel,Fairy
+303_01,Mawile-Mega,Steel,Fairy
 304,Aron,Steel,Rock
 305,Lairon,Steel,Rock
 306,Aggron,Steel,Rock
-306_01,Mega Aggron,Steel,
+306_01,Aggron-Mega,Steel,
 307,Meditite,Psychic,Fighting
 308,Medicham,Psychic,Fighting
-308_01,Mega Medicham,Psychic,Fighting
+308_01,Medicham-Mega,Psychic,Fighting
 309,Electrike,Electric,
 310,Manectric,Electric,
-310_01,Mega Manectric,Electric,
+310_01,Manectric-Mega,Electric,
 311,Plusle,Electric,
 312,Minun,Electric,
 313,Volbeat,Bug,
@@ -392,12 +392,12 @@ Number,Name,Type 1,Type 2
 317,Swalot,Poison,
 318,Carvanha,Water,Dark
 319,Sharpedo,Water,Dark
-319_01,Mega Sharpedo,Water,Dark
+319_01,Sharpedo-Mega,Water,Dark
 320,Wailmer,Water,
 321,Wailord,Water,
 322,Numel,Fire,Ground
 323,Camerupt,Fire,Ground
-323_01,Mega Camerupt,Fire,Ground
+323_01,Camerupt-Mega,Fire,Ground
 324,Torkoal,Fire,
 325,Spoink,Psychic,
 326,Grumpig,Psychic,
@@ -409,7 +409,7 @@ Number,Name,Type 1,Type 2
 332,Cacturne,Grass,Dark
 333,Swablu,Normal,Flying
 334,Altaria,Dragon,Flying
-334_01,Mega Altaria,Dragon,Fairy
+334_01,Altaria-Mega,Dragon,Fairy
 335,Zangoose,Normal,
 336,Seviper,Poison,
 337,Lunatone,Rock,Psychic
@@ -430,17 +430,17 @@ Number,Name,Type 1,Type 2
 352,Kecleon,Normal,
 353,Shuppet,Ghost,
 354,Banette,Ghost,
-354_01,Mega Banette,Ghost,
+354_01,Banette-Mega,Ghost,
 355,Duskull,Ghost,
 356,Dusclops,Ghost,
 357,Tropius,Grass,Flying
 358,Chimecho,Psychic,
 359,Absol,Dark,
-359_01,Mega Absol,Dark,
+359_01,Absol-Mega,Dark,
 360,Wynaut,Psychic,
 361,Snorunt,Ice,
 362,Glalie,Ice,
-362_01,Mega Glalie,Ice,
+362_01,Glalie-Mega,Ice,
 363,Spheal,Ice,Water
 364,Sealeo,Ice,Water
 365,Walrein,Ice,Water
@@ -452,24 +452,24 @@ Number,Name,Type 1,Type 2
 371,Bagon,Dragon,
 372,Shelgon,Dragon,
 373,Salamence,Dragon,Flying
-373_01,Mega Salamence,Dragon,Flying
+373_01,Salamence-Mega,Dragon,Flying
 374,Beldum,Steel,Psychic
 375,Metang,Steel,Psychic
 376,Metagross,Steel,Psychic
-376_01,Mega Metagross,Steel,Psychic
+376_01,Metagross-Mega,Steel,Psychic
 377,Regirock,Rock,
 378,Regice,Ice,
 379,Registeel,Steel,
 380,Latias,Dragon,Psychic
-380_01,Mega Latias,Dragon,Psychic
+380_01,Latias-Mega,Dragon,Psychic
 381,Latios,Dragon,Psychic
-381_01,Mega Latios,Dragon,Psychic
+381_01,Latios-Mega,Dragon,Psychic
 382,Kyogre,Water,
 382_01,Kyogre-Primal,Water,
 383,Groudon,Ground,
 383_01,Groudon-Primal,Ground,Fire
 384,Rayquaza,Dragon,Flying
-384_01,Mega Rayquaza,Dragon,Flying
+384_01,Rayquaza-Mega,Dragon,Flying
 385,Jirachi,Steel,Psychic
 386,Deoxys,Psychic,
 386_01,Deoxys-Attack,Psychic,
@@ -519,7 +519,7 @@ Number,Name,Type 1,Type 2
 426,Drifblim,Ghost,Flying
 427,Buneary,Normal,
 428,Lopunny,Normal,
-428_01,Mega Lopunny,Normal,Fighting
+428_01,Lopunny-Mega,Normal,Fighting
 429,Mismagius,Ghost,
 430,Honchkrow,Dark,Flying
 431,Glameow,Normal,
@@ -537,11 +537,11 @@ Number,Name,Type 1,Type 2
 443,Gible,Dragon,Ground
 444,Gabite,Dragon,Ground
 445,Garchomp,Dragon,Ground
-445_01,Mega Garchomp,Dragon,Ground
+445_01,Garchomp-Mega,Dragon,Ground
 446,Munchlax,Normal,
 447,Riolu,Fighting,
 448,Lucario,Fighting,Steel
-448_01,Mega Lucario,Fighting,Steel
+448_01,Lucario-Mega,Fighting,Steel
 449,Hippopotas,Ground,
 450,Hippowdon,Ground,
 451,Skorupi,Poison,Bug
@@ -554,7 +554,7 @@ Number,Name,Type 1,Type 2
 458,Mantyke,Water,Flying
 459,Snover,Grass,Ice
 460,Abomasnow,Grass,Ice
-460_01,Mega Abomasnow,Grass,Ice
+460_01,Abomasnow-Mega,Grass,Ice
 461,Weavile,Dark,Ice
 462,Magnezone,Electric,Steel
 463,Lickilicky,Normal,
@@ -570,7 +570,7 @@ Number,Name,Type 1,Type 2
 473,Mamoswine,Ice,Ground
 474,Porygon-Z,Normal,
 475,Gallade,Psychic,Fighting
-475_01,Mega Gallade,Psychic,Fighting
+475_01,Gallade-Mega,Psychic,Fighting
 476,Probopass,Rock,Steel
 477,Dusknoir,Ghost,
 478,Froslass,Ice,Ghost
@@ -635,7 +635,7 @@ Number,Name,Type 1,Type 2
 529,Drilbur,Ground,
 530,Excadrill,Ground,Steel
 531,Audino,Normal,
-531_01,Mega Audino,Normal,Fairy
+531_01,Audino-Mega,Normal,Fairy
 532,Timburr,Fighting,
 533,Gurdurr,Fighting,
 534,Conkeldurr,Fighting,
@@ -847,7 +847,7 @@ Number,Name,Type 1,Type 2
 718_01,Zygarde-10%,Dragon,Ground
 718_02,Zygarde-Complete,Dragon,Ground
 719,Diancie,Rock,Fairy
-719_01,Mega Diancie,Rock,Fairy
+719_01,Diancie-Mega,Rock,Fairy
 720,Hoopa,Psychic,Ghost
 720_01,Hoopa-Unbound,Psychic,Dark
 721,Volcanion,Fire,Water

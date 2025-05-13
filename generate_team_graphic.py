@@ -142,6 +142,7 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
     # Fetch Pokémon data to get the Pokédex number and types
     pokedex_number, types = get_pokedex_data(pokemon.name)
 
+    print(f"Pokédex number: {pokedex_number}, Types: {types}")
 
     if "_" in pokedex_number:
         pokemon.name = pokemon.name.split("-")[0]
@@ -170,14 +171,17 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
     item_id = fetch_item_id(pokemon.item)
     if item_id is None:
         print(f"Could not fetch ID for item: {pokemon.item}")
+        item_id = "0000"
         return
 
     item_icon_path = f"assets/items/item_{item_id}.png"
     try:
         item_icon = Image.open(item_icon_path).resize((int(40 * scale), int(40 * scale)))
-        image.paste(item_icon, (int(30 * scale), int(140 * scale)), item_icon)
+        
     except FileNotFoundError:
         print(f"Item icon not found: {item_icon_path}")
+        item_icon = Image.open('assets/items/item_0000.png').resize((int(40 * scale), int(40 * scale)))
+    image.paste(item_icon, (int(30 * scale), int(140 * scale)), item_icon)
     draw.text((int(80 * scale), int(150 * scale)), pokemon.item, font=font_medium, fill="white")
 
     
