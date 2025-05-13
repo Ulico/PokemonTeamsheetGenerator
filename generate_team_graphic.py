@@ -1,10 +1,6 @@
 from PIL import Image, ImageDraw, ImageFont
 import csv
 import pokepy
-from pathlib import Path
-
-# Define the base path for the script
-BASE_DIR = Path(__file__).parent
 
 class Pokemon:
     def __init__(self, name, item, ability, level, tera_type, moves, gender=None):
@@ -92,7 +88,7 @@ def parse_team_file(file_path):
 
 def fetch_item_id(item_name):
     """Fetch the ID of a given Pokémon item using the items.csv file."""
-    csv_file = BASE_DIR / "assets/data/items.csv"
+    csv_file = "assets/data/items.csv"
     try:
         with open(csv_file, mode='r', encoding='utf-8') as file:
             reader = csv.DictReader(file)
@@ -105,7 +101,7 @@ def fetch_item_id(item_name):
 
 def get_pokedex_data(pokemon_name):
     """Fetch the Pokédex number and types for a given Pokémon name using pokemon.csv."""
-    csv_file = BASE_DIR / "assets/data/pokemon.csv"
+    csv_file = "assets/data/pokemon.csv"
     try:
         with open(csv_file, mode='r', encoding='utf-8') as file:
             reader = csv.DictReader(file)
@@ -127,9 +123,9 @@ def get_sprite_path(pokedex_number):
     # print(f"Fetching sprite for Pokedex number: {pokedex_number}")
     if "_" in pokedex_number:
         base_number, suffix = pokedex_number.split("_")
-        return BASE_DIR / f"assets/sprites/{base_number.zfill(4)}_{suffix}.png"
+        return f"assets/sprites/{base_number.zfill(4)}_{suffix}.png"
     else:
-        return BASE_DIR / f"assets/sprites/{pokedex_number.zfill(4)}.png"
+        return f"assets/sprites/{pokedex_number.zfill(4)}.png"
 
 def create_pokemon_graphic(pokemon, image, scale=2.0):
     """Draw Pokémon information directly onto the provided image object, scaled by the given factor."""
@@ -139,12 +135,13 @@ def create_pokemon_graphic(pokemon, image, scale=2.0):
     width, height = image.size
 
     # Load fonts with increased scaling
-    font_bold = ImageFont.truetype(str(BASE_DIR / "assets/fonts/Roboto-Bold.ttf"), int(28 * scale))  # Increased size
-    font_medium = ImageFont.truetype(str(BASE_DIR / "assets/fonts/Roboto-Medium.ttf"), int(24 * scale))  # Increased size
+    font_bold = ImageFont.truetype("assets/fonts/Roboto-Bold.ttf", int(28 * scale))  # Increased size
+    font_medium = ImageFont.truetype("assets/fonts/Roboto-Medium.ttf", int(24 * scale))  # Increased size
 
 
     # Fetch Pokémon data to get the Pokédex number and types
     pokedex_number, types = get_pokedex_data(pokemon.name)
+
 
     if "_" in pokedex_number:
         pokemon.name = pokemon.name.split("-")[0]
@@ -157,7 +154,7 @@ def create_pokemon_graphic(pokemon, image, scale=2.0):
 
     # Draw gender icon if available
     if pokemon.gender:
-        gender_icon_path = BASE_DIR / f"assets/genders/{'male' if pokemon.gender == 'M' else 'female'}.png"
+        gender_icon_path = f"assets/genders/{'male' if pokemon.gender == 'M' else 'female'}.png"
         try:
             gender_icon = Image.open(gender_icon_path).resize((int(23 * scale), int(23 * scale)))  # Slightly bigger size
             image.paste(gender_icon, (int(108 * scale), int(68 * scale)), gender_icon)  # Closer to level text and shifted down
@@ -175,7 +172,7 @@ def create_pokemon_graphic(pokemon, image, scale=2.0):
         print(f"Could not fetch ID for item: {pokemon.item}")
         return
 
-    item_icon_path = BASE_DIR / f"assets/items/item_{item_id}.png"
+    item_icon_path = f"assets/items/item_{item_id}.png"
     try:
         item_icon = Image.open(item_icon_path).resize((int(40 * scale), int(40 * scale)))
         image.paste(item_icon, (int(30 * scale), int(140 * scale)), item_icon)
@@ -202,7 +199,7 @@ def create_pokemon_graphic(pokemon, image, scale=2.0):
     y_offset = int(20 * scale)
 
     for type_name in types:
-        type_icon_path = BASE_DIR / f"assets/types/{type_name.lower()}.png"
+        type_icon_path = f"assets/types/{type_name.lower()}.png"
         try:
             # Load the PNG type icon
             type_icon = Image.open(type_icon_path).resize(type_icon_size)
@@ -217,7 +214,7 @@ def create_pokemon_graphic(pokemon, image, scale=2.0):
 
     # Update the placeholder for a single type to make none.png 50% opaque
     if len(types) == 1:
-        none_icon_path = BASE_DIR / "assets/types/none.png"
+        none_icon_path = "assets/types/none.png"
         try:
             none_icon = Image.open(none_icon_path).convert("RGBA").resize(type_icon_size)
             # Adjust opacity to 50%
@@ -234,7 +231,7 @@ def create_pokemon_graphic(pokemon, image, scale=2.0):
 
     # Position the Tera type icon directly to the right of the other type icons
     tera_icon_size = (int(type_icon_size[0]), int(type_icon_size[1]))
-    tera_icon_path = BASE_DIR / f"assets/types/{pokemon.tera_type.lower()}.png"
+    tera_icon_path = f"assets/types/{pokemon.tera_type.lower()}.png"
     try:
         tera_icon = Image.open(tera_icon_path).resize((int(tera_icon_size[0]), int(tera_icon_size[1])))
         tera_x_offset = x_offset + int(10 * scale)
@@ -266,7 +263,7 @@ def create_pokemon_graphic(pokemon, image, scale=2.0):
     y_offset = (height - (4 * int(40 * scale))) // 2  # Ensure space for 4 moves
 
     for move, move_type in move_types:
-        type_icon_path = BASE_DIR / f"assets/types/{move_type.lower()}.png"
+        type_icon_path = f"assets/types/{move_type.lower()}.png"
         try:
             # Load the PNG type icon
             type_icon = Image.open(type_icon_path).resize(move_icon_size)
@@ -284,7 +281,7 @@ def create_pokemon_graphic(pokemon, image, scale=2.0):
             print(f"Error processing type icon for {move_type}: {e}")
 
     # Add grey circles for missing moves
-    none_icon_path = BASE_DIR / "assets/types/none.png"
+    none_icon_path = "assets/types/none.png"
     for _ in range(4 - len(move_types)):
         try:
             none_icon = Image.open(none_icon_path).convert("RGBA").resize(move_icon_size)
@@ -299,11 +296,8 @@ def create_pokemon_graphic(pokemon, image, scale=2.0):
 
 def create_teamsheet(team, output_path):
     """Create a full teamsheet with 6 Pokémon boxes arranged in a 3x2 table."""
-
-    print("Generating teamsheet... Please wait.")
     # Load the background image
-    image_path = BASE_DIR / "assets" / "images" / "battle.JPG"
-    background = Image.open(image_path).convert("RGBA")
+    background = Image.open("assets/images/battle.JPG").convert("RGBA")
     sheet_width, sheet_height = background.size  # Match the dimensions of the background image
 
     # Create a blank image for the teamsheet with a solid black background
@@ -350,7 +344,7 @@ def create_teamsheet(team, output_path):
         box_draw = ImageDraw.Draw(box)
 
         # Add a number to the bottom right corner of the box
-        number_font = ImageFont.truetype(str(BASE_DIR / "assets/fonts/Roboto-ExtraBoldItalic.ttf"), int(60 * 0.85))  # Slightly larger font size
+        number_font = ImageFont.truetype("assets/fonts/Roboto-ExtraBoldItalic.ttf", int(60 * 0.85))  # Slightly larger font size
         number_text = str(i + 1)  # Box number starts from 1
         text_bbox = number_font.getbbox(number_text)  # Use getbbox to calculate text dimensions
         text_width, text_height = text_bbox[2] - text_bbox[0], text_bbox[3] - text_bbox[1]
