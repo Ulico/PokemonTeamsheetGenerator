@@ -88,7 +88,7 @@ def parse_team_file(file_path):
 
 def fetch_item_id(item_name):
     """Fetch the ID of a given Pokémon item using the items.csv file."""
-    csv_file = "c:/Users/adria/Documents/Teamsheet Graphic Generator/assets/data/items.csv"
+    csv_file = "assets/data/items.csv"
     try:
         with open(csv_file, mode='r', encoding='utf-8') as file:
             reader = csv.DictReader(file)
@@ -101,7 +101,7 @@ def fetch_item_id(item_name):
 
 def get_pokedex_data(pokemon_name):
     """Fetch the Pokédex number and types for a given Pokémon name using pokemon.csv."""
-    csv_file = "c:/Users/adria/Documents/Teamsheet Graphic Generator/assets/data/pokemon.csv"
+    csv_file = "assets/data/pokemon.csv"
     try:
         with open(csv_file, mode='r', encoding='utf-8') as file:
             reader = csv.DictReader(file)
@@ -366,7 +366,7 @@ def create_teamsheet(team, output_path):
 
 # Example usage
 if __name__ == "__main__":
-    team_file_path = "c:/Users/adria/Documents/Teamsheet Graphic Generator/team_paste.txt"
+    team_file_path = "team_paste.txt"
     team = parse_team_file(team_file_path)
     if team:
-        create_teamsheet(team, "c:/Users/adria/Documents/Teamsheet Graphic Generator/teamsheet.png")
+        create_teamsheet(team, "teamsheet.png")
