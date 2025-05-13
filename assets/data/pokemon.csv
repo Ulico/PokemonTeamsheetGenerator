@@ -755,13 +755,13 @@ Number,Name,Type 1,Type 2
 639,Terrakion,Rock,Fighting
 640,Virizion,Grass,Fighting
 641,Tornadus,Flying,
-641_01,Tornadus-T,Flying,
+641_01,Tornadus-Therian,Flying,
 642,Thundurus,Electric,Flying
-642_01,Thundurus-T,Electric,Flying
+642_01,Thundurus-Therian,Electric,Flying
 643,Reshiram,Dragon,Fire
 644,Zekrom,Dragon,Electric
 645,Landorus,Ground,Flying
-645_01,Landorus-T,Ground,Flying
+645_01,Landorus-Therian,Ground,Flying
 646,Kyurem,Dragon,Ice
 646_01,Kyurem-Black,Dragon,Ice
 646_02,Kyurem-White,Dragon,Ice
@@ -1054,7 +1054,7 @@ Number,Name,Type 1,Type 2
 903,Sneasler,Fighting,Poison
 904,Overqwil,Dark,Poison
 905,Enamorus,Fairy,Flying
-905_01,Enamorus-T,Fairy,Flying
+905_01,Enamorus-Therian,Fairy,Flying
 906,Sprigatito,Grass,
 907,Floragato,Grass,
 908,Meowscarada,Grass,Dark
