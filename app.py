@@ -20,8 +20,8 @@ if team_data:
     if st.button("Generate Teamsheet Graphic"):
         try:
             # Update the subprocess call to use the virtual environment's Python executable
-            venv_python = os.path.join(os.getcwd(), 'venv', 'Scripts', 'python')
-            subprocess.run([venv_python, "generate_team_graphic.py"], check=True)
+            # venv_python = os.path.join(os.getcwd(), 'venv', 'Scripts', 'python')
+            subprocess.run(["python", "generate_team_graphic.py"], check=True)
 
             # Display the generated teamsheet graphic
             if os.path.exists("teamsheet.png"):
