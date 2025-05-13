@@ -302,7 +302,7 @@ def create_teamsheet(team, output_path):
 
     print("Generating teamsheet... Please wait.")
     # Load the background image
-    image_path = BASE_DIR / "assets" / "images" / "battle.jpg"
+    image_path = BASE_DIR / "assets" / "images" / "battle.JPG"
     background = Image.open(image_path).convert("RGBA")
     sheet_width, sheet_height = background.size  # Match the dimensions of the background image
 
