@@ -12,11 +12,7 @@ This tool generates a visually appealing teamsheet graphic for Pokémon teams. I
 ## Prerequisites
 - Python 3.8+
 - Required Python libraries:
-  - `Pillow`
-  - `bs4`
-  - `pokepy`
-
-Install dependencies using:
+  Install dependencies using:
 ```bash
 pip install -r requirements.txt
 ```

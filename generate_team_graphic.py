@@ -1,8 +1,5 @@
-from PIL import Image, ImageDraw, ImageFont, ImageOps
-import sys
+from PIL import Image, ImageDraw, ImageFont
 import csv
-import os
-from io import BytesIO
 import pokepy
 
 class Pokemon:
@@ -346,7 +343,7 @@ def create_teamsheet(team, output_path):
         box_draw = ImageDraw.Draw(box)
 
         # Add a number to the bottom right corner of the box
-        number_font = ImageFont.truetype("assets/fonts/Roboto-Italic.ttf", int(60 * 0.85))  # Slightly larger font size
+        number_font = ImageFont.truetype("assets/fonts/Roboto-ExtraBoldItalic.ttf", int(60 * 0.85))  # Slightly larger font size
         number_text = str(i + 1)  # Box number starts from 1
         text_bbox = number_font.getbbox(number_text)  # Use getbbox to calculate text dimensions
         text_width, text_height = text_bbox[2] - text_bbox[0], text_bbox[3] - text_bbox[1]
