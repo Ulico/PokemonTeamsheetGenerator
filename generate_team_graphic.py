@@ -228,8 +228,9 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
     draw.line([(x_offset, y_offset), (x_offset, y_offset + int(30 * scale))], fill="gray", width=1)
 
     # Position the Tera type icon directly to the right of the other type icons
-    tera_icon_size = (int(50 * scale), int(50 * scale))
-    tera_icon_path = f"assets/icons/tera_types/{pokemon.tera_type.lower()}.png"
+    # tera_icon_size = (int(50 * scale), int(50 * scale))
+    tera_icon_size = type_icon_size
+    tera_icon_path = f"assets/icons/types/{pokemon.tera_type.lower()}.png"
     try:
         tera_icon = Image.open(tera_icon_path).resize((tera_icon_size[0], tera_icon_size[1]))
 
@@ -237,7 +238,7 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
             # Adjust opacity to 50% for none.png
             tera_icon = Image.eval(tera_icon, lambda p: p // 2 if p > 0 else p)
 
-        tera_x_offset = x_offset
+        tera_x_offset = x_offset + int(10 * scale)
         tera_y_offset = y_offset - (tera_icon_size[1] - type_icon_size[1]) // 2
         image.paste(tera_icon, (tera_x_offset, int(tera_y_offset)), tera_icon.split()[3])
         x_offset += int(50 * scale)
@@ -247,7 +248,7 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
         print(f"Error processing Tera type icon: {e}")
 
     # Draw the large vertical line to the right of the Tera type icon
-    draw.line([(x_offset, 20*scale), (x_offset, height-(20*scale))], fill="white", width=1)
+    draw.line([(x_offset, 12*scale), (x_offset, height-(12*scale))], fill="white", width=1)
 
     # Fetch move types using pokepy
     move_types = []
