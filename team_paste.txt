@@ -1,62 +1,69 @@
-Kyogre @ Choice Scarf  
-Ability: Drizzle  
-Level: 50  
-EVs: 252 SpA / 4 SpD / 252 Spe  
-Timid Nature  
-IVs: 0 Atk  
-- Water Spout  
-- Ice Beam  
-- Thunder  
-- Origin Pulse  
-
-Tornadus @ Focus Sash  
-Ability: Prankster  
-Level: 50  
-EVs: 4 HP / 252 SpA / 252 Spe  
-Timid Nature  
-IVs: 0 Atk  
-- Tailwind  
-- Hurricane  
-- Taunt  
+Koraidon @ Life Orb  
+Ability: Orichalcum Pulse  
+Level: 91  
+Tera Type: Fire  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Close Combat  
+- Flare Blitz  
+- Flame Charge  
 - Protect  
 
-Kartana @ Life Orb  
-Ability: Beast Boost  
-Level: 50  
-EVs: 196 HP / 68 Atk / 244 SpD  
-Adamant Nature  
-- Leaf Blade  
-- Smart Strike  
-- Sacred Sword  
-- Detect  
+Brute Bonnet @ Covert Cloak  
+Ability: Protosynthesis  
+Level: 77  
+Tera Type: Water  
+EVs: 252 HP / 4 Atk / 132 Def / 116 SpD / 4 Spe  
+Impish Nature  
+- Protect  
+- Sucker Punch  
+- Spore  
+- Rage Powder  
 
-Rillaboom-Gmax @ Assault Vest  
-Ability: Grassy Surge  
-Level: 50  
-EVs: 244 HP / 4 Atk / 84 Def / 44 SpD / 132 Spe  
-Adamant Nature  
-- Fake Out  
-- Grassy Glide  
-- Knock Off  
-- U-turn  
+Raging Bolt @ Assault Vest  
+Ability: Protosynthesis  
+Level: 76  
+Tera Type: Fairy  
+EVs: 196 HP / 76 Def / 196 SpA / 4 SpD / 36 Spe  
+Modest Nature  
+IVs: 20 Atk  
+- Thunderbolt  
+- Thunderclap  
+- Draco Meteor  
+- Electroweb  
 
-Landorus-Therian @ White Herb  
+Incineroar @ Safety Goggles  
 Ability: Intimidate  
-Level: 50  
-EVs: 4 HP / 252 Atk / 252 Spe  
-Adamant Nature  
-- Swords Dance  
-- Rock Slide  
-- Fly  
-- Earthquake  
+Level: 55  
+Tera Type: Bug  
+EVs: 252 HP / 4 Atk / 12 Def / 236 SpD / 4 Spe  
+Careful Nature  
+- Taunt  
+- Flare Blitz  
+- Parting Shot  
+- Fake Out  
 
-Solgaleo @ Weakness Policy  
-Ability: Full Metal Body  
-Level: 50  
-EVs: 220 HP / 180 Atk / 28 Def / 52 SpD / 28 Spe  
-Adamant Nature  
-- Sunsteel Strike  
-- Earthquake  
-- Rock Slide  
+Lunala @ Power Herb  
+Ability: Shadow Shield  
+Level: 77  
+Tera Type: Water  
+EVs: 252 HP / 44 Def / 180 SpA / 4 SpD / 28 Spe  
+Modest Nature  
+IVs: 11 Atk  
+- Moongeist Beam  
+- Meteor Beam  
+- Wide Guard  
+- Trick Room  
+
+Flutter Mane @ Focus Sash  
+Ability: Protosynthesis  
+Level: 84  
+Tera Type: Fairy  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 27 Atk  
+- Moonblast  
+- Shadow Ball  
+- Icy Wind  
 - Protect  
 
