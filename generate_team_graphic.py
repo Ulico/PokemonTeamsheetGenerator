@@ -228,16 +228,16 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
     draw.line([(x_offset, y_offset), (x_offset, y_offset + int(30 * scale))], fill="gray", width=1)
 
     # Position the Tera type icon directly to the right of the other type icons
-    tera_icon_size = (int(type_icon_size[0] * 1.6), int(type_icon_size[1] * 1.6))
+    tera_icon_size = (int(50 * scale), int(50 * scale))
     tera_icon_path = f"assets/icons/tera_types/{pokemon.tera_type.lower()}.png"
     try:
-        tera_icon = Image.open(tera_icon_path).convert("RGBA").resize((int(tera_icon_size[0]), int(tera_icon_size[1])))
+        tera_icon = Image.open(tera_icon_path).resize((tera_icon_size[0], tera_icon_size[1]))
 
         if pokemon.tera_type.lower() == "none":
             # Adjust opacity to 50% for none.png
             tera_icon = Image.eval(tera_icon, lambda p: p // 2 if p > 0 else p)
 
-        tera_x_offset = x_offset + int(3 * scale)
+        tera_x_offset = x_offset
         tera_y_offset = y_offset - (tera_icon_size[1] - type_icon_size[1]) // 2
         image.paste(tera_icon, (tera_x_offset, int(tera_y_offset)), tera_icon.split()[3])
         x_offset += int(50 * scale)
@@ -301,16 +301,21 @@ def create_teamsheet(team, output_path):
     """Create a full teamsheet with 6 Pokémon boxes arranged in a 3x2 table."""
     # Load the background image
     background = Image.open("assets/images/battle.JPG")
-    sheet_width, sheet_height = background.size  # Match the dimensions of the background image
+    
+    # Modify the final teamsheet to be twice as large
+    sheet_width, sheet_height = background.size
+    sheet_width *= 2
+    sheet_height *= 2
 
-    # Create a blank image for the teamsheet with a solid black background
+    # Create a blank image for the teamsheet with the new dimensions
     teamsheet = Image.new("RGBA", (sheet_width, sheet_height))  # Solid black background
-    teamsheet.paste(background, (0, 0))  # Add the background image
+    background = background.resize((sheet_width, sheet_height))  # Resize the background
+    teamsheet.paste(background, (0, 0))  # Add the resized background image
 
     # Calculate the grid layout dynamically based on the background dimensions
-    box_width, box_height = int(500 * 1.2), int(140 * 1.2)  # Adjusted dimensions for the boxes
-    horizontal_spacing = 30
-    vertical_spacing = 30
+    box_width, box_height = int(1000 * 1.2), int(280 * 1.2)  # Adjusted dimensions for the boxes
+    horizontal_spacing = 60
+    vertical_spacing = 60
     grid_width = box_width * 2 + horizontal_spacing
     grid_height = box_height * 3 + vertical_spacing * 2
     x_offset_start = (sheet_width - grid_width) // 2
@@ -339,7 +344,7 @@ def create_teamsheet(team, output_path):
         box.putalpha(mask)
 
         # Draw Pokémon information directly onto the box
-        create_pokemon_graphic(pokemon, box, scale=0.85)  # Slightly increase the contents' size
+        create_pokemon_graphic(pokemon, box, scale=1.7)  # Slightly increase the contents' size
 
         # Create a draw object for the box
         box_draw = ImageDraw.Draw(box)
