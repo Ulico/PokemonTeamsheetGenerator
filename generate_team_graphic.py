@@ -343,19 +343,21 @@ def create_teamsheet(team, output_path):
         # Apply the mask to the box to create rounded corners
         box.putalpha(mask)
 
+        scale=1.7
+
         # Draw Pokémon information directly onto the box
-        create_pokemon_graphic(pokemon, box, scale=1.7)  # Slightly increase the contents' size
+        create_pokemon_graphic(pokemon, box, scale=scale)  # Slightly increase the contents' size
 
         # Create a draw object for the box
         box_draw = ImageDraw.Draw(box)
 
         # Add a number to the bottom right corner of the box
-        number_font = ImageFont.truetype("assets/fonts/Roboto-ExtraBoldItalic.ttf", int(60 * 0.85))  # Slightly larger font size
+        number_font = ImageFont.truetype("assets/fonts/Roboto-ExtraBoldItalic.ttf", int(60 * scale))  # Slightly larger font size
         number_text = str(i + 1)  # Box number starts from 1
         text_bbox = number_font.getbbox(number_text)  # Use getbbox to calculate text dimensions
         text_width, text_height = text_bbox[2] - text_bbox[0], text_bbox[3] - text_bbox[1]
-        width_padding = int(15 * 0.85)  # Smaller padding for width
-        height_padding = int(30 * 0.85)  # Keep the height padding the same
+        width_padding = int(15 * scale)  # Smaller padding for width
+        height_padding = int(30 * scale)  # Keep the height padding the same
         number_x = box_width - text_width - width_padding  # Padding from the right
         number_y = box_height - text_height - height_padding  # Padding from the bottom
 
