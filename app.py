@@ -62,3 +62,5 @@ if team_data:
 # Footer
 st.markdown("---")
 st.markdown("Created by Ulico")
+
+st.markdown("Feel free to fork this project or report issues on [GitHub](https://github.com/Ulico/PokemonTeamsheetGenerator). Your contributions are welcome!")

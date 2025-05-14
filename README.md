@@ -1,12 +1,12 @@
 # Pokémon Teamsheet Graphic Generator
+This tool generates a visually appealing teamsheet graphic for Pokémon teams based on Scarlet Violet designs. A live hosted version can be found [here](https://ulico-pokemonteamsheetgenerator-app-ukjjki.streamlit.app/).
 
-This tool generates a visually appealing teamsheet graphic for Pokémon teams. It dynamically adjusts layouts, integrates background images, and includes detailed information about each Pokémon, such as moves, abilities, and types.
+**Warning:** This tool is designed for Gen 9 Pokémon teams. While older teams may work correctly, certain issues may arise.
 
 ## Features
 - **Dynamic Layout**: Automatically adjusts to fit all Pokémon boxes within the background dimensions.
 - **Customizable Graphics**: Includes semi-transparent black backgrounds, rounded corners, and stylized text.
 - **Move and Type Icons**: Displays move types and Pokémon types with appropriate icons.
-- **Gender and Nickname Support**: Handles Pokémon with nicknames and genders.
 - **Placeholder Icons**: Adds grey circles for missing moves or single-type Pokémon.
 
 ## Prerequisites
@@ -24,12 +24,16 @@ assets/
     items.csv          # Pokémon item data
     pokemon.csv        # Pokémon data
   fonts/               # Font files for text rendering
-  genders/             # Gender icons (male, female)
+  icons/               
+    genders/           # Gender icons (male, female)
+    items/             # Item icons
+    tera_types/        # Tera type icons
+    types/             # Type icons
   images/              # Background images
-  items/               # Item icons
+  moves/               # Move icons
   sprites/             # Pokémon sprites
-  tera_types/          # Tera type icons
-  types/               # Type icons
+  
+generate_team_graphic.py  # Main script for generating the teamsheet
 ```
 
 ## Usage
