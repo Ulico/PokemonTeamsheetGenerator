@@ -16,7 +16,7 @@ st.title("Pokémon Teamsheet Graphic Generator")
 # Update the template example for team_data using README.md example
 team_data = st.text_area(
     "Paste your team data below:", 
-    height=300,
+    height=240,
     placeholder="""Pikachu (F) @ Light Ball
 Ability: Static
 Level: 50
