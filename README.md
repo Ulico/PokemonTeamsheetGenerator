@@ -69,3 +69,11 @@ Feel free to fork this repository and submit pull requests for new features or b
 
 ## License
 This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+## Sources
+This project utilizes assets and inspiration from the following sources:
+
+- [Pokémon Type Icons by rwaltenberg](https://github.com/rwaltenberg/pokemon-type-icons)
+- [Project Pokémon Sprite Index](https://projectpokemon.org/home/docs/spriteindex_148)
+- [The Spriters Resource - Pokémon Scarlet and Violet](https://www.spriters-resource.com/nintendo_switch/pokemonscarletviolet/sheet/187089/)
+- [Pokémon Tera Type Symbols by JormxDos](https://www.deviantart.com/jormxdos/gallery/85377027/pokemon-tera-type-symbols-paldea)
