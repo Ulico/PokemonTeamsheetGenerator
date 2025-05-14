@@ -129,7 +129,7 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
     width, height = image.size
 
     # Load fonts with increased scaling
-    font_bold = ImageFont.truetype("assets/fonts/Roboto-Bold.ttf", int(28 * scale))  # Increased size
+    font_bold = ImageFont.truetype("assets/fonts/Roboto-Bold.ttf", int(30 * scale))  # Increased size
     font_medium = ImageFont.truetype("assets/fonts/Roboto-Medium.ttf", int(24 * scale))  # Increased size
 
 
