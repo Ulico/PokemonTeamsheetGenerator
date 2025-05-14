@@ -247,7 +247,7 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
         print(f"Error processing Tera type icon: {e}")
 
     # Draw the large vertical line to the right of the Tera type icon
-    draw.line([(x_offset, 17), (x_offset, height-17)], fill="white", width=1)
+    draw.line([(x_offset, 20*scale), (x_offset, height-(20*scale))], fill="white", width=1)
 
     # Fetch move types using pokepy
     move_types = []
