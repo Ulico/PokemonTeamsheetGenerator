@@ -27,7 +27,6 @@ def parse_team_file(file_path):
                 # Parse name and item
                 name_item_line = lines[i].strip()
                 item = None
-                nickname = None
                 gender = None
                 if ' @ ' in name_item_line:
                     name, item = name_item_line.split(' @ ')
@@ -36,20 +35,15 @@ def parse_team_file(file_path):
 
                     # Check if name includes a nickname or gender
                     if '(' in name and ')' in name:
-                        parts = name.split(' (')
-                        if len(parts) == 3:  # Nickname, Name, and Gender
-                            nickname = parts[0].strip()
-                            name = parts[1].strip(')')
-                            gender = parts[2].strip(')')
-                        elif len(parts) == 2:  # Either Nickname and Name or Name and Gender
-                            nickname_or_name, extra = parts
-                            extra = extra.strip(')')
-                            if extra in ['M', 'F']:  # Gender case
-                                name = nickname_or_name.strip()
-                                gender = extra
-                            else:  # Nickname case
-                                nickname = nickname_or_name.strip()
-                                name = extra
+                        parts = name.split('(')
+                        # print(parts)
+                        parts = [part.strip().strip(')') for part in parts]
+
+                        if parts[-1] in ['M', 'F']:
+                            name = parts[-2]
+                            gender = parts[-1]
+                        else:
+                            name = parts[-1]
                 else:
                     name = name_item_line.strip()
 
