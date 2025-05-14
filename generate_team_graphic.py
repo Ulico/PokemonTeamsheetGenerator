@@ -149,7 +149,7 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
 
     # Draw gender icon if available
     if pokemon.gender:
-        gender_icon_path = f"assets/genders/{'male' if pokemon.gender == 'M' else 'female'}.png"
+        gender_icon_path = f"assets/icons/genders/{'male' if pokemon.gender == 'M' else 'female'}.png"
         try:
             gender_icon = Image.open(gender_icon_path).resize((int(23 * scale), int(23 * scale)))  # Slightly bigger size
             image.paste(gender_icon, (int(108 * scale), int(68 * scale)), gender_icon)  # Closer to level text and shifted down
@@ -168,13 +168,13 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
         item_id = "0000"
         return
 
-    item_icon_path = f"assets/items/item_{item_id}.png"
+    item_icon_path = f"assets/icons/items/item_{item_id}.png"
     try:
         item_icon = Image.open(item_icon_path).resize((int(40 * scale), int(40 * scale)))
         
     except FileNotFoundError:
         print(f"Item icon not found: {item_icon_path}")
-        item_icon = Image.open('assets/items/item_0000.png').resize((int(40 * scale), int(40 * scale)))
+        item_icon = Image.open('assets/icons/items/item_0000.png').resize((int(40 * scale), int(40 * scale)))
     image.paste(item_icon, (int(30 * scale), int(140 * scale)), item_icon)
     draw.text((int(80 * scale), int(150 * scale)), pokemon.item, font=font_medium, fill="white")
 
@@ -197,7 +197,7 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
     y_offset = int(20 * scale)
 
     for type_name in types:
-        type_icon_path = f"assets/types/{type_name.lower()}.png"
+        type_icon_path = f"assets/icons/types/{type_name.lower()}.png"
         try:
             # Load the PNG type icon
             type_icon = Image.open(type_icon_path).resize(type_icon_size)
@@ -212,7 +212,7 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
 
     # Update the placeholder for a single type to make none.png 50% opaque
     if len(types) == 1:
-        none_icon_path = "assets/types/none.png"
+        none_icon_path = "assets/icons/types/none.png"
         try:
             none_icon = Image.open(none_icon_path).convert("RGBA").resize(type_icon_size)
             # Adjust opacity to 50%
@@ -228,8 +228,8 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
     draw.line([(x_offset, y_offset), (x_offset, y_offset + int(30 * scale))], fill="gray", width=1)
 
     # Position the Tera type icon directly to the right of the other type icons
-    tera_icon_size = (int(type_icon_size[0]), int(type_icon_size[1]))
-    tera_icon_path = f"assets/types/{pokemon.tera_type.lower()}.png"
+    tera_icon_size = (int(type_icon_size[0] * 1.6), int(type_icon_size[1] * 1.6))
+    tera_icon_path = f"assets/icons/tera_types/{pokemon.tera_type.lower()}.png"
     try:
         tera_icon = Image.open(tera_icon_path).convert("RGBA").resize((int(tera_icon_size[0]), int(tera_icon_size[1])))
 
@@ -237,7 +237,7 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
             # Adjust opacity to 50% for none.png
             tera_icon = Image.eval(tera_icon, lambda p: p // 2 if p > 0 else p)
 
-        tera_x_offset = x_offset + int(10 * scale)
+        tera_x_offset = x_offset + int(3 * scale)
         tera_y_offset = y_offset - (tera_icon_size[1] - type_icon_size[1]) // 2
         image.paste(tera_icon, (tera_x_offset, int(tera_y_offset)), tera_icon.split()[3])
         x_offset += int(50 * scale)
@@ -266,7 +266,7 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
     y_offset = (height - (4 * int(40 * scale))) // 2  # Ensure space for 4 moves
 
     for move, move_type in move_types:
-        type_icon_path = f"assets/types/{move_type.lower()}.png"
+        type_icon_path = f"assets/icons/types/{move_type.lower()}.png"
         try:
             # Load the PNG type icon
             type_icon = Image.open(type_icon_path).resize(move_icon_size)
@@ -284,7 +284,7 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
             print(f"Error processing type icon for {move_type}: {e}")
 
     # Add grey circles for missing moves
-    none_icon_path = "assets/types/none.png"
+    none_icon_path = "assets/icons/types/none.png"
     for _ in range(4 - len(move_types)):
         try:
             none_icon = Image.open(none_icon_path).convert("RGBA").resize(move_icon_size)
