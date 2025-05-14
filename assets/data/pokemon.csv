@@ -763,8 +763,8 @@ Number,Name,Type 1,Type 2
 645,Landorus,Ground,Flying
 645_01,Landorus-Therian,Ground,Flying
 646,Kyurem,Dragon,Ice
-646_01,Kyurem-Black,Dragon,Ice
-646_02,Kyurem-White,Dragon,Ice
+646_01,Kyurem-White,Dragon,Ice
+646_02,Kyurem-Black,Dragon,Ice
 647,Keldeo,Water,Fighting
 648,Meloetta,Normal,Psychic
 648_01,Meloetta-Pirouette,Normal,Fighting
@@ -1035,7 +1035,8 @@ Number,Name,Type 1,Type 2
 889_01,Zamazenta-Crowned,Fighting,Steel
 890,Eternatus,Poison,Dragon
 891,Kubfu,Fighting,
-892,Urshifu-Single-Strike,Fighting,Dark
+892,Urshifu,Fighting,Water
+892_01,Urshifu-Single-Strike,Fighting,Dark
 892_01,Urshifu-Rapid-Strike,Fighting,Water
 893,Zarude,Grass,Dark
 894,Regieleki,Electric,
