@@ -197,7 +197,7 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
     y_offset = int(20 * scale)
 
     for type_name in types:
-        type_icon_path = f"assets/icons/types/{type_name.lower()}.png"
+        type_icon_path = f"assets/icons/types/{type_name.lower()}_icon_HOME3.png"
         try:
             # Load the PNG type icon
             type_icon = Image.open(type_icon_path).resize(type_icon_size)
@@ -228,9 +228,9 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
     draw.line([(x_offset, y_offset), (x_offset, y_offset + int(30 * scale))], fill="gray", width=1)
 
     # Position the Tera type icon directly to the right of the other type icons
-    # tera_icon_size = (int(50 * scale), int(50 * scale))
-    tera_icon_size = type_icon_size
-    tera_icon_path = f"assets/icons/types/{pokemon.tera_type.lower()}.png"
+    tera_icon_size = (int(36 * scale), int(36 * scale))
+    # tera_icon_size = type_icon_size * 1.2
+    tera_icon_path = f"assets/icons/tera_types/TeraGem_{pokemon.tera_type.lower()}.png"
     try:
         tera_icon = Image.open(tera_icon_path).resize((tera_icon_size[0], tera_icon_size[1]))
 
@@ -238,7 +238,7 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
             # Adjust opacity to 50% for none.png
             tera_icon = Image.eval(tera_icon, lambda p: p // 2 if p > 0 else p)
 
-        tera_x_offset = x_offset + int(10 * scale)
+        tera_x_offset = x_offset + int(8 * scale)
         tera_y_offset = y_offset - (tera_icon_size[1] - type_icon_size[1]) // 2
         image.paste(tera_icon, (tera_x_offset, int(tera_y_offset)), tera_icon.split()[3])
         x_offset += int(50 * scale)
@@ -267,7 +267,7 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
     y_offset = (height - (4 * int(40 * scale))) // 2  # Ensure space for 4 moves
 
     for move, move_type in move_types:
-        type_icon_path = f"assets/icons/types/{move_type.lower()}.png"
+        type_icon_path = f"assets/icons/types/{move_type.lower()}_icon_HOME3.png"
         try:
             # Load the PNG type icon
             type_icon = Image.open(type_icon_path).resize(move_icon_size)
