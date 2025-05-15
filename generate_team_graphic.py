@@ -93,15 +93,27 @@ def fetch_item_id(item_name):
         print(f"Error reading items.csv: {e}")
     return None
 
-def get_pokedex_data(pokemon_name):
-    """Fetch the Pokédex number and types for a given Pokémon name using pokemon.csv."""
+def get_pokedex_data(pokemon_name, gender=None):
+    """Fetch the Pokédex number and types for a given Pokémon name using pokemon.csv, considering gender-specific entries."""
     csv_file = "assets/data/pokemon.csv"
     try:
         with open(csv_file, mode='r', encoding='utf-8') as file:
             reader = csv.DictReader(file)
+            # If gender is specified, try to find a gender-specific entry first
+            if gender:
+                gender_suffix = '-M' if gender == 'M' else '-F'
+                for row in reader:
+                    if row['Name'].strip().lower() == f"{pokemon_name.strip().lower()}{gender_suffix.lower()}":
+                        pokedex_number = row['Number'].strip()
+                        type_1 = row['Type 1'].strip()
+                        type_2 = row['Type 2'].strip() if row['Type 2'].strip() else None
+                        return pokedex_number, [type_1, type_2] if type_2 else [type_1]
+                file.seek(0)
+                next(reader)  # Skip header
+            # Fallback: search for the base name
             for row in reader:
                 if row['Name'].strip().lower() == pokemon_name.strip().lower():
-                    pokedex_number = row['Number'].strip()  # Ensure '#' is parsed correctly
+                    pokedex_number = row['Number'].strip()
                     type_1 = row['Type 1'].strip()
                     type_2 = row['Type 2'].strip() if row['Type 2'].strip() else None
                     return pokedex_number, [type_1, type_2] if type_2 else [type_1]
@@ -134,7 +146,7 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
 
 
     # Fetch Pokémon data to get the Pokédex number and types
-    pokedex_number, types = get_pokedex_data(pokemon.name)
+    pokedex_number, types = get_pokedex_data(pokemon.name, pokemon.gender)
 
     print(f"Pokédex number: {pokedex_number}, Types: {types}")
 
