@@ -197,7 +197,7 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
     y_offset = int(20 * scale)
 
     for type_name in types:
-        type_icon_path = f"assets/icons/types/{type_name.lower()}_icon_HOME3.png"
+        type_icon_path = f"assets/icons/types/{type_name.lower()}.png"
         try:
             # Load the PNG type icon
             type_icon = Image.open(type_icon_path).resize(type_icon_size)
@@ -230,7 +230,7 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
     # Position the Tera type icon directly to the right of the other type icons
     tera_icon_size = (int(36 * scale), int(36 * scale))
     # tera_icon_size = type_icon_size * 1.2
-    tera_icon_path = f"assets/icons/tera_types/TeraGem_{pokemon.tera_type.lower()}.png"
+    tera_icon_path = f"assets/icons/tera_types/{pokemon.tera_type.lower()}.png"
     try:
         tera_icon = Image.open(tera_icon_path).resize((tera_icon_size[0], tera_icon_size[1]))
 
@@ -267,7 +267,7 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
     y_offset = (height - (4 * int(40 * scale))) // 2  # Ensure space for 4 moves
 
     for move, move_type in move_types:
-        type_icon_path = f"assets/icons/types/{move_type.lower()}_icon_HOME3.png"
+        type_icon_path = f"assets/icons/types/{move_type.lower()}.png"
         try:
             # Load the PNG type icon
             type_icon = Image.open(type_icon_path).resize(move_icon_size)
