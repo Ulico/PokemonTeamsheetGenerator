@@ -513,7 +513,8 @@ Number,Name,Type 1,Type 2
 420,Cherubi,Grass,
 421,Cherrim,Grass,
 422,Shellos,Water,
-423,Gastrodon,Water,Ground
+423,Gastrodon-West,Water,Ground
+423,Gastrodon-East,Water,Ground
 424,Ambipom,Normal,
 425,Drifloon,Ghost,Flying
 426,Drifblim,Ghost,Flying

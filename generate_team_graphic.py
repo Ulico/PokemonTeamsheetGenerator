@@ -33,19 +33,22 @@ def parse_team_file(file_path):
                     name = name.strip()
                     item = item.strip()
 
-                    # Check if name includes a nickname or gender
-                    if '(' in name and ')' in name:
-                        parts = name.split('(')
-                        # print(parts)
-                        parts = [part.strip().strip(')') for part in parts]
 
-                        if parts[-1] in ['M', 'F']:
-                            name = parts[-2]
-                            gender = parts[-1]
-                        else:
-                            name = parts[-1]
                 else:
                     name = name_item_line.strip()
+                    # print(name)
+
+                # Check if name includes a nickname or gender
+                if '(' in name and ')' in name:
+                    parts = name.split('(')
+                    # print(parts)
+                    parts = [part.strip().strip(')') for part in parts]
+
+                    if parts[-1] in ['M', 'F']:
+                        name = parts[-2]
+                        gender = parts[-1]
+                    else:
+                        name = parts[-1]
 
                 # Initialize default values
                 ability = 'None'
@@ -176,9 +179,10 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
     # Draw item icon and name
     item_id = fetch_item_id(pokemon.item)
     if item_id is None:
-        print(f"Could not fetch ID for item: {pokemon.item}")
+        print(f"Could not fetch ID for item: {pokemon.item} (or Pokemon has no item)")
         item_id = "0000"
-        return
+        pokemon.item = "None"  # Set item to None if not found
+        
 
     item_icon_path = f"assets/icons/items/item_{item_id}.png"
     try:
