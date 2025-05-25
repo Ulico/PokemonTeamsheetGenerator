@@ -362,8 +362,7 @@ def create_teamsheet(team, output_path):
 
         scale=1.7
 
-        # Draw Pokémon information directly onto the box
-        create_pokemon_graphic(pokemon, box, scale=scale)  # Slightly increase the contents' size
+        
 
         # Create a draw object for the box
         box_draw = ImageDraw.Draw(box)
@@ -383,6 +382,9 @@ def create_teamsheet(team, output_path):
 
         # Draw the number with the specified style
         box_draw.text((number_x, number_y), number_text, font=number_font, fill=faint_white)
+
+        # Draw Pokémon information directly onto the box
+        create_pokemon_graphic(pokemon, box, scale=scale)  # Slightly increase the contents' size
 
         # Paste the Pokémon box onto the teamsheet
         teamsheet.paste(box, (x_offset, y_offset), box)
