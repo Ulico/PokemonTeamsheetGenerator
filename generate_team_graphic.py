@@ -389,8 +389,9 @@ def create_teamsheet(team, output_path):
         # Paste the Pokémon box onto the teamsheet
         teamsheet.paste(box, (x_offset, y_offset), box)
 
-    # Save the final teamsheet
-    teamsheet.save(output_path)
+    # Save the final teamsheet as an RGB image (no alpha layer)
+    rgb_teamsheet = teamsheet.convert("RGB")
+    rgb_teamsheet.save(output_path)
 
 # Example usage
 if __name__ == "__main__":
