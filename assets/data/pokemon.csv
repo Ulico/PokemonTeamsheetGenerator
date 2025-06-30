@@ -67,9 +67,9 @@ Number,Name,Type 1,Type 2
 51_01,Dugtrio-Alola,Ground,Steel
 52,Meowth,Normal,
 52_01,Meowth-Alola,Dark,
-052_01,Meowth-Galar,Steel,
+52_01,Meowth-Galar,Steel,
 53,Persian,Normal,
-53,Persian-Alola,Dark,
+53_01,Persian-Alola,Dark,
 54,Psyduck,Water,
 55,Golduck,Water,
 56,Mankey,Fighting,
@@ -1169,6 +1169,7 @@ Number,Name,Type 1,Type 2
 1011,Dipplin,Grass,Dragon
 1012,Poltchageist,Grass,Ghost
 1013,Sinistcha,Grass,Ghost
+1013_01,Sinistcha-Masterpiece,Grass,Ghost
 1014,Okidogi,Poison,Fighting
 1015,Munkidori,Poison,Psychic
 1016,Fezandipiti,Poison,Fairy
