@@ -224,7 +224,7 @@ Item Number,Item Name
 222,Silver Powder
 223,Amulet Coin
 224,Cleanse Tag
-225,Soul Dew*
+225,Soul Dew
 226,Deep Sea Tooth
 227,Deep Sea Scale
 228,Smoke Ball
@@ -234,7 +234,7 @@ Item Number,Item Name
 232,Scope Lens
 233,Metal Coat
 234,Leftovers
-235,Dragon Scale*
+235,Dragon Scale
 236,Light Ball
 237,Soft Sand
 238,Hard Stone
@@ -251,7 +251,7 @@ Item Number,Item Name
 249,Charcoal
 250,Dragon Fang
 251,Silk Scarf
-252,Upgrade*
+252,Upgrade
 253,Shell Bell
 254,Sea Incense
 255,Lax Incense
@@ -320,10 +320,10 @@ Item Number,Item Name
 318,Rose Incense
 319,Luck Incense
 320,Pure Incense
-321,Protector*
-322,Electirizer*
-323,Magmarizer*
-324,Dubious Disc*
+321,Protector
+322,Electirizer
+323,Magmarizer
+324,Dubious Disc
 325,Reaper Cloth
 326,Razor Claw
 327,Razor Fang
@@ -627,8 +627,8 @@ Item Number,Item Name
 625,Gram 3
 626,Xtransceiver
 627,Medal Box
-628,DNA Splicers*
-629,DNA Splicers*
+628,DNA Splicers
+629,DNA Splicers
 630,Permit
 631,Oval Charm
 632,Shiny Charm
@@ -942,10 +942,10 @@ Item Number,Item Name
 940,Purple Petal
 941,Rainbow Flower
 942,Surge Badge
-943,N-Solarizer*
-944,N-Lunarizer*
-945,N-Solarizer*
-946,N-Lunarizer*
+943,N-Solarizer
+944,N-Lunarizer
+945,N-Solarizer
+946,N-Lunarizer
 947,Ilima's Normalium Z
 948,Left Poké Ball
 949,Roto Hatch
@@ -1108,13 +1108,13 @@ Item Number,Item Name
 1106,Fossilized Fish
 1107,Fossilized Drake
 1108,Fossilized Dino
-1109,Strawberry Sweet*
-1110,Love Sweet*
-1111,Berry Sweet*
-1112,Clover Sweet*
-1113,Flower Sweet*
-1114,Star Sweet*
-1115,Ribbon Sweet*
+1109,Strawberry Sweet
+1110,Love Sweet
+1111,Berry Sweet
+1112,Clover Sweet
+1113,Flower Sweet
+1114,Star Sweet
+1115,Ribbon Sweet
 1116,Sweet Apple
 1117,Tart Apple
 1118,Throat Spray
@@ -1580,7 +1580,7 @@ Item Number,Item Name
 1578,★Aql7235
 1579,Max Honey
 1580,Max Mushrooms
-1581,Galarica Twig*
+1581,Galarica Twig
 1582,Galarica Cuff
 1583,Style Card
 1584,Armor Pass
@@ -2231,64 +2231,64 @@ Item Number,Item Name
 2229,TM169
 2230,TM170
 2231,TM171
-2232,TM172*
-2233,TM173*
-2234,TM174*
-2235,TM175*
-2236,TM176*
-2237,TM177*
-2238,TM178*
-2239,TM179*
-2240,TM180*
-2241,TM181*
-2242,TM182*
-2243,TM183*
-2244,TM184*
-2245,TM185*
-2246,TM186*
-2247,TM187*
-2248,TM188*
-2249,TM189*
-2250,TM190*
-2251,TM191*
-2252,TM192*
-2253,TM193*
-2254,TM194*
-2255,TM195*
-2256,TM196*
-2257,TM197*
-2258,TM198*
-2259,TM199*
-2260,TM200*
-2261,TM201*
-2262,TM202*
-2263,TM203*
-2264,TM204*
-2265,TM205*
-2266,TM206*
-2267,TM207*
-2268,TM208*
-2269,TM209*
-2270,TM210*
-2271,TM211*
-2272,TM212*
-2273,TM213*
-2274,TM214*
-2275,TM215*
-2276,TM216*
-2277,TM217*
-2278,TM218*
-2279,TM219*
-2280,TM220*
-2281,TM221*
-2282,TM222*
-2283,TM223*
-2284,TM224*
-2285,TM225*
-2286,TM226*
-2287,TM227*
-2288,TM228*
-2289,TM229*
+2232,TM172
+2233,TM173
+2234,TM174
+2235,TM175
+2236,TM176
+2237,TM177
+2238,TM178
+2239,TM179
+2240,TM180
+2241,TM181
+2242,TM182
+2243,TM183
+2244,TM184
+2245,TM185
+2246,TM186
+2247,TM187
+2248,TM188
+2249,TM189
+2250,TM190
+2251,TM191
+2252,TM192
+2253,TM193
+2254,TM194
+2255,TM195
+2256,TM196
+2257,TM197
+2258,TM198
+2259,TM199
+2260,TM200
+2261,TM201
+2262,TM202
+2263,TM203
+2264,TM204
+2265,TM205
+2266,TM206
+2267,TM207
+2268,TM208
+2269,TM209
+2270,TM210
+2271,TM211
+2272,TM212
+2273,TM213
+2274,TM214
+2275,TM215
+2276,TM216
+2277,TM217
+2278,TM218
+2279,TM219
+2280,TM220
+2281,TM221
+2282,TM222
+2283,TM223
+2284,TM224
+2285,TM225
+2286,TM226
+2287,TM227
+2288,TM228
+2289,TM229
 2290,None
 2291,None
 2292,None
@@ -2400,163 +2400,163 @@ Item Number,Item Name
 2398,Red Dish
 2399,White Dish
 2400,Yellow Dish
-2401,Fairy Feather*
-2402,Syrupy Apple*
-2403,Unremarkable Teacup*
-2404,Masterpiece Teacup*
-2405,Teal Mask*
-2406,Cornerstone Mask*
-2407,Wellspring Mask*
-2408,Hearthflame Mask*
-2409,Teal Style Card*
-2410,Crystal Cluster*
-2411,Health Mochi*
-2412,Muscle Mochi*
-2413,Resist Mochi*
-2414,Genius Mochi*
-2415,Clever Mochi*
-2416,Swift Mochi*
-2417,Simple Chairs*
-2418,Academy Chairs*
-2419,Academy Chairs*
-2420,Whimsical Chairs*
-2421,Leafy Chairs*
-2422,Spooky Chairs*
-2423,Plaid Chairs (Y)*
-2424,Plaid Chairs (B)*
-2425,Plaid Chairs (R)*
-2426,B&W Grass Chairs*
-2427,Battle Chairs*
-2428,Monstrous Chairs*
-2429,Striped Chairs*
-2430,Diamond Chairs*
-2431,Polka-Dot Chairs*
-2432,Lilac Chairs*
-2433,Mint Chairs*
-2434,Peach Chairs*
-2435,Yellow Chairs*
-2436,Blue Chairs*
-2437,Pink Chairs*
-2438,Ekans Fang*
-2439,Sandshrew Claw*
-2440,Cleffa Fur*
-2441,Vulpix Fur*
-2442,Poliwag Slime*
-2443,Bellsprout Vine*
-2444,Geodude Fragment*
-2445,Koffing Gas*
-2446,Munchlax Fang*
-2447,Sentret Fur*
-2448,Hoothoot Feather*
-2449,Spinarak Thread*
-2450,Aipom Hair*
-2451,Yanma Spike*
-2452,Gligar Fang*
-2453,Slugma Lava*
-2454,Swinub Hair*
-2455,Poochyena Fang*
-2456,Lotad Leaf*
-2457,Seedot Stem*
-2458,Nosepass Fragment*
-2459,Volbeat Fluid*
-2460,Illumise Fluid*
-2461,Corphish Shell*
-2462,Feebas Scales*
-2463,Duskull Fragment*
-2464,Chingling Fragment*
-2465,Timburr Sweat*
-2466,Sewaddle Leaf*
-2467,Ducklett Feather*
-2468,Litwick Soot*
-2469,Mienfoo Claw*
-2470,Vullaby Feather*
-2471,Carbink Jewel*
-2472,Phantump Twig*
-2473,Grubbin Thread*
-2474,Cutiefly Powder*
-2475,Jangmo-o Scales*
-2476,Cramorant Down*
-2477,Morpeko Snack*
-2478,Poltchageist Powder*
-2479,Fresh-Start Mochi*
-2480,Roto-Stick*
-2481,Glimmering Charm*
-2482,Metal Alloy*
-2483,Indigo Style Card*
-2484,Oddish Leaf*
-2485,Tentacool Stinger*
-2486,Doduo Down*
-2487,Seel Fur*
-2488,Exeggcute Shell*
-2489,Tyrogue Sweat*
-2490,Rhyhorn Fang*
-2491,Horsea Ink*
-2492,Elekid Fur*
-2493,Magby Hair*
-2494,Lapras Teardrop*
-2495,Porygon Fragment*
-2496,Chinchou Sparks*
-2497,Snubbull Hair*
-2498,Skarmory Feather*
-2499,Smeargle Paint*
-2500,Plusle Fur*
-2501,Minun Fur*
-2502,Trapinch Shell*
-2503,Beldum Claw*
-2504,Cranidos Spike*
-2505,Shieldon Claw*
-2506,Blitzle Mane Hair*
-2507,Drilbur Claw*
-2508,Cottonee Fluff*
-2509,Scraggy Sweat*
-2510,Minccino Fur*
-2511,Solosis Gel*
-2512,Joltik Thread*
-2513,Golett Shard*
-2514,Espurr Fur*
-2515,Inkay Ink*
-2516,Pikipek Feather*
-2517,Dewpider Thread*
-2518,Comfey Flower*
-2519,Minior Shell*
-2520,Milcery Cream*
-2521,Duraludon Tarnish*
-2522,Articuno Treat*
-2523,Zapdos Treat*
-2524,Moltres Treat*
-2525,Raikou Treat*
-2526,Entei Treat*
-2527,Suicune Treat*
-2528,Lugia Treat*
-2529,Ho-Oh Treat*
-2530,Latias Treat*
-2531,Latios Treat*
-2532,Kyogre Treat*
-2533,Groudon Treat*
-2534,Rayquaza Treat*
-2535,Cobalion Treat*
-2536,Terrakion Treat*
-2537,Virizion Treat*
-2538,Reshiram Treat*
-2539,Zekrom Treat*
-2540,Kyurem Treat*
-2541,Solgaleo Treat*
-2542,Lunala Treat*
-2543,Necrozma Treat*
-2544,Kubfu Treat*
-2545,Glastrier Treat*
-2546,Spectrier Treat*
-2547,Indigo Disk*
-2548,Fiery Pick*
-2549,Stellar Tera Shard*
-2550,Mythical Pecha Berry*
-2551,Blueberry Tablecloth*
-2552,Blueberry Chairs*
-2553,Synchro Machine*
-2554,Meteorite*
-2555,Scarlet Book*
-2556,Violet Book*
-2557,Briar's Book*
+2401,Fairy Feather
+2402,Syrupy Apple
+2403,Unremarkable Teacup
+2404,Masterpiece Teacup
+2405,Teal Mask
+2406,Cornerstone Mask
+2407,Wellspring Mask
+2408,Hearthflame Mask
+2409,Teal Style Card
+2410,Crystal Cluster
+2411,Health Mochi
+2412,Muscle Mochi
+2413,Resist Mochi
+2414,Genius Mochi
+2415,Clever Mochi
+2416,Swift Mochi
+2417,Simple Chairs
+2418,Academy Chairs
+2419,Academy Chairs
+2420,Whimsical Chairs
+2421,Leafy Chairs
+2422,Spooky Chairs
+2423,Plaid Chairs (Y)
+2424,Plaid Chairs (B)
+2425,Plaid Chairs (R)
+2426,B&W Grass Chairs
+2427,Battle Chairs
+2428,Monstrous Chairs
+2429,Striped Chairs
+2430,Diamond Chairs
+2431,Polka-Dot Chairs
+2432,Lilac Chairs
+2433,Mint Chairs
+2434,Peach Chairs
+2435,Yellow Chairs
+2436,Blue Chairs
+2437,Pink Chairs
+2438,Ekans Fang
+2439,Sandshrew Claw
+2440,Cleffa Fur
+2441,Vulpix Fur
+2442,Poliwag Slime
+2443,Bellsprout Vine
+2444,Geodude Fragment
+2445,Koffing Gas
+2446,Munchlax Fang
+2447,Sentret Fur
+2448,Hoothoot Feather
+2449,Spinarak Thread
+2450,Aipom Hair
+2451,Yanma Spike
+2452,Gligar Fang
+2453,Slugma Lava
+2454,Swinub Hair
+2455,Poochyena Fang
+2456,Lotad Leaf
+2457,Seedot Stem
+2458,Nosepass Fragment
+2459,Volbeat Fluid
+2460,Illumise Fluid
+2461,Corphish Shell
+2462,Feebas Scales
+2463,Duskull Fragment
+2464,Chingling Fragment
+2465,Timburr Sweat
+2466,Sewaddle Leaf
+2467,Ducklett Feather
+2468,Litwick Soot
+2469,Mienfoo Claw
+2470,Vullaby Feather
+2471,Carbink Jewel
+2472,Phantump Twig
+2473,Grubbin Thread
+2474,Cutiefly Powder
+2475,Jangmo-o Scales
+2476,Cramorant Down
+2477,Morpeko Snack
+2478,Poltchageist Powder
+2479,Fresh-Start Mochi
+2480,Roto-Stick
+2481,Glimmering Charm
+2482,Metal Alloy
+2483,Indigo Style Card
+2484,Oddish Leaf
+2485,Tentacool Stinger
+2486,Doduo Down
+2487,Seel Fur
+2488,Exeggcute Shell
+2489,Tyrogue Sweat
+2490,Rhyhorn Fang
+2491,Horsea Ink
+2492,Elekid Fur
+2493,Magby Hair
+2494,Lapras Teardrop
+2495,Porygon Fragment
+2496,Chinchou Sparks
+2497,Snubbull Hair
+2498,Skarmory Feather
+2499,Smeargle Paint
+2500,Plusle Fur
+2501,Minun Fur
+2502,Trapinch Shell
+2503,Beldum Claw
+2504,Cranidos Spike
+2505,Shieldon Claw
+2506,Blitzle Mane Hair
+2507,Drilbur Claw
+2508,Cottonee Fluff
+2509,Scraggy Sweat
+2510,Minccino Fur
+2511,Solosis Gel
+2512,Joltik Thread
+2513,Golett Shard
+2514,Espurr Fur
+2515,Inkay Ink
+2516,Pikipek Feather
+2517,Dewpider Thread
+2518,Comfey Flower
+2519,Minior Shell
+2520,Milcery Cream
+2521,Duraludon Tarnish
+2522,Articuno Treat
+2523,Zapdos Treat
+2524,Moltres Treat
+2525,Raikou Treat
+2526,Entei Treat
+2527,Suicune Treat
+2528,Lugia Treat
+2529,Ho-Oh Treat
+2530,Latias Treat
+2531,Latios Treat
+2532,Kyogre Treat
+2533,Groudon Treat
+2534,Rayquaza Treat
+2535,Cobalion Treat
+2536,Terrakion Treat
+2537,Virizion Treat
+2538,Reshiram Treat
+2539,Zekrom Treat
+2540,Kyurem Treat
+2541,Solgaleo Treat
+2542,Lunala Treat
+2543,Necrozma Treat
+2544,Kubfu Treat
+2545,Glastrier Treat
+2546,Spectrier Treat
+2547,Indigo Disk
+2548,Fiery Pick
+2549,Stellar Tera Shard
+2550,Mythical Pecha Berry
+2551,Blueberry Tablecloth
+2552,Blueberry Chairs
+2553,Synchro Machine
+2554,Meteorite
+2555,Scarlet Book
+2556,Violet Book
+2557,Briar's Book
 2558,Seed of Mastery
 2559,Clefablite
 2560,Victreebelite
