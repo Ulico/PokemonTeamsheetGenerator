@@ -2,6 +2,25 @@ from PIL import Image, ImageDraw, ImageFont
 import csv
 import pokepy
 
+# "champions" = Pokemon Champions style (default)
+# "sv"        = Pokemon Scarlet/Violet style
+MODE = "champions"
+
+# Champions mode palette
+_CHAMP_BG_BASE    = (253, 244, 200)
+_CHAMP_BG_DIAMOND = (236, 224, 168)
+_CHAMP_BOX_COLOR  = (128, 108, 192, 200)
+
+
+def _create_champions_background(width, height):
+    img = Image.new("RGBA", (width, height), _CHAMP_BG_BASE + (255,))
+    draw = ImageDraw.Draw(img)
+    step = max(width, height) // 18
+    for x in range(-height, width + height, step):
+        draw.line([(x, 0), (x + height, height)], fill=_CHAMP_BG_DIAMOND + (255,), width=2)
+        draw.line([(x, 0), (x - height, height)], fill=_CHAMP_BG_DIAMOND + (255,), width=2)
+    return img
+
 class Pokemon:
     def __init__(self, name, item, ability, level, tera_type, moves, gender=None):
         self.name = name
@@ -147,6 +166,7 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
     font_bold = ImageFont.truetype("assets/fonts/Roboto-Bold.ttf", int(30 * scale))  # Increased size
     font_medium = ImageFont.truetype("assets/fonts/Roboto-Medium.ttf", int(24 * scale))  # Increased size
 
+    print(pokemon.name)
 
     # Fetch Pokémon data to get the Pokédex number and types
     pokedex_number, types = get_pokedex_data(pokemon.name, pokemon.gender)
@@ -240,30 +260,29 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
         except Exception as e:
             print(f"Error processing None type icon: {e}")
 
-    # Draw a small vertical line separating the Tera type icon from the other type icons
-    draw.line([(x_offset, y_offset), (x_offset, y_offset + int(30 * scale))], fill="gray", width=1)
+    if MODE == "sv":
+        # Draw a small vertical line separating the Tera type icon from the other type icons
+        draw.line([(x_offset, y_offset), (x_offset, y_offset + int(30 * scale))], fill="gray", width=1)
 
-    # Position the Tera type icon directly to the right of the other type icons
-    tera_icon_size = (int(36 * scale), int(36 * scale))
-    # tera_icon_size = type_icon_size * 1.2
-    tera_icon_path = f"assets/icons/tera_types/{pokemon.tera_type.lower()}.png"
-    try:
-        tera_icon = Image.open(tera_icon_path).resize((tera_icon_size[0], tera_icon_size[1]))
+        # Position the Tera type icon directly to the right of the other type icons
+        tera_icon_size = (int(36 * scale), int(36 * scale))
+        tera_icon_path = f"assets/icons/tera_types/{pokemon.tera_type.lower()}.png"
+        try:
+            tera_icon = Image.open(tera_icon_path).resize((tera_icon_size[0], tera_icon_size[1]))
 
-        if pokemon.tera_type.lower() == "none":
-            # Adjust opacity to 50% for none.png
-            tera_icon = Image.eval(tera_icon, lambda p: p // 2 if p > 0 else p)
+            if pokemon.tera_type.lower() == "none":
+                tera_icon = Image.eval(tera_icon, lambda p: p // 2 if p > 0 else p)
 
-        tera_x_offset = x_offset + int(8 * scale)
-        tera_y_offset = y_offset - (tera_icon_size[1] - type_icon_size[1]) // 2
-        image.paste(tera_icon, (tera_x_offset, int(tera_y_offset)), tera_icon.split()[3])
-        x_offset += int(50 * scale)
-    except FileNotFoundError:
-        print(f"Tera type icon not found: {tera_icon_path}")
-    except Exception as e:
-        print(f"Error processing Tera type icon: {e}")
+            tera_x_offset = x_offset + int(8 * scale)
+            tera_y_offset = y_offset - (tera_icon_size[1] - type_icon_size[1]) // 2
+            image.paste(tera_icon, (tera_x_offset, int(tera_y_offset)), tera_icon.split()[3])
+            x_offset += int(50 * scale)
+        except FileNotFoundError:
+            print(f"Tera type icon not found: {tera_icon_path}")
+        except Exception as e:
+            print(f"Error processing Tera type icon: {e}")
 
-    # Draw the large vertical line to the right of the Tera type icon
+    # Draw the large vertical line to the right of the type icons
     draw.line([(x_offset, 12*scale), (x_offset, height-(12*scale))], fill="white", width=1)
 
     # Fetch move types using pokepy
@@ -316,18 +335,18 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
 
 def create_teamsheet(team, output_path):
     """Create a full teamsheet with 6 Pokémon boxes arranged in a 3x2 table."""
-    # Load the background image
-    background = Image.open("assets/images/battle.JPG")
-    
-    # Modify the final teamsheet to be twice as large
-    sheet_width, sheet_height = background.size
-    sheet_width *= 2
-    sheet_height *= 2
+    if MODE == "champions":
+        sheet_width, sheet_height = 2560, 1440
+        background = _create_champions_background(sheet_width, sheet_height)
+    else:
+        background = Image.open("assets/images/battle.JPG")
+        sheet_width, sheet_height = background.size
+        sheet_width *= 2
+        sheet_height *= 2
+        background = background.resize((sheet_width, sheet_height))
 
-    # Create a blank image for the teamsheet with the new dimensions
-    teamsheet = Image.new("RGBA", (sheet_width, sheet_height))  # Solid black background
-    background = background.resize((sheet_width, sheet_height))  # Resize the background
-    teamsheet.paste(background, (0, 0))  # Add the resized background image
+    teamsheet = Image.new("RGBA", (sheet_width, sheet_height))
+    teamsheet.paste(background, (0, 0))
 
     # Calculate the grid layout dynamically based on the background dimensions
     box_width, box_height = int(1000 * 1.2), int(280 * 1.2)  # Adjusted dimensions for the boxes
@@ -344,20 +363,18 @@ def create_teamsheet(team, output_path):
         x_offset = x_offset_start + (i % 2) * (box_width + horizontal_spacing)
         y_offset = y_offset_start + (i // 2) * (box_height + vertical_spacing)
 
-        # Create a blank box for the Pokémon with a semi-transparent tint
-        box = Image.new("RGBA", (box_width, box_height))  # Semi-transparent black tint
+        corner_radius = int(box_height * 0.1)
 
-        # Create a mask for rounded corners with a smaller radius
+        if MODE == "champions":
+            box = Image.new("RGBA", (box_width, box_height), _CHAMP_BOX_COLOR[:3] + (0,))
+            mask_fill = _CHAMP_BOX_COLOR[3]
+        else:
+            box = Image.new("RGBA", (box_width, box_height))
+            mask_fill = 130
+
         mask = Image.new("L", (box_width, box_height), 0)
         draw_mask = ImageDraw.Draw(mask)
-        corner_radius = int(box_height * 0.1)  # Reduced corner radius
-        draw_mask.rounded_rectangle(
-            [(0, 0), (box_width, box_height)],
-            radius=corner_radius,
-            fill=130  # Fully white for the mask
-        )
-
-        # Apply the mask to the box to create rounded corners
+        draw_mask.rounded_rectangle([(0, 0), (box_width, box_height)], radius=corner_radius, fill=mask_fill)
         box.putalpha(mask)
 
         scale=1.7

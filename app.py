@@ -3,6 +3,7 @@ from PIL import Image
 from pathlib import Path
 
 # Import the necessary functions from generate_team_graphic.py
+import generate_team_graphic
 from generate_team_graphic import parse_team_file, create_teamsheet
 
 # Define base directory using pathlib
@@ -12,6 +13,14 @@ output_image_path = BASE_DIR / "teamsheet.png"
 
 # Set the title of the app
 st.title("Pokémon Teamsheet Graphic Generator")
+
+mode = st.radio(
+    "Style",
+    options=["champions", "sv"],
+    format_func=lambda m: "Pokémon Champions" if m == "champions" else "Pokémon Scarlet/Violet",
+    horizontal=True,
+)
+generate_team_graphic.MODE = mode
 
 # Update the template example for team_data using README.md example
 team_data = st.text_area(
