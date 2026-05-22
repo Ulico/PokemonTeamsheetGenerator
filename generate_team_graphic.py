@@ -307,14 +307,6 @@ def _draw_champions_layout(pokemon, image, draw, scale, types, move_types,
             draw.text((mx + move_icon_sz + int(12 * s), my + move_text_oy + 4), move, font=font_moves, fill="white")
         except Exception:
             pass
-    for i in range(len(move_types), 4):
-        my = moves_top + i * move_slot_h + (move_slot_h - move_icon_sz) // 2
-        try:
-            none = Image.open("assets/icons/types_champions/none.png").convert("RGBA").resize(move_icon_t)
-            none = Image.eval(none, lambda p: p // 2 if p > 0 else p)
-            image.paste(none, (mx, my), none.split()[3])
-        except Exception:
-            pass
 
     return sprite_image
 
@@ -499,16 +491,19 @@ def create_teamsheet(team, output_path):
         if MODE == "champions":
             mask_fill = _CHAMP_BOX_COLOR[3]
             box = Image.new("RGBA", (box_width, box_height), (0, 0, 0, 0))
-            _bg = ImageDraw.Draw(box)
-            _box_edge = (148, 130, 220)
-            _box_mid  = (132, 115, 206)
-            for _y in range(box_height):
-                _t = _y / max(box_height - 1, 1)
-                _t2 = 1.0 - abs(_t * 2 - 1.0)  # 0 at edges, 1 at centre
-                _r = int(_box_edge[0] + (_box_mid[0] - _box_edge[0]) * _t2)
-                _g = int(_box_edge[1] + (_box_mid[1] - _box_edge[1]) * _t2)
-                _b = int(_box_edge[2] + (_box_mid[2] - _box_edge[2]) * _t2)
-                _bg.line([(0, _y), (box_width, _y)], fill=(_r, _g, _b, mask_fill))
+            import numpy as np
+            _box_edge = np.array([165, 148, 232], dtype=float)
+            _box_mid  = np.array([132, 115, 206], dtype=float)
+            _ty = np.linspace(0, 1, box_height)
+            _tx = np.linspace(0, 1, box_width)
+            _t2y = (1.0 - np.abs(_ty * 2 - 1.0)) ** 0.5
+            _t2x = (1.0 - np.abs(_tx * 2 - 1.0)) ** 0.5
+            _t2  = (_t2y[:, np.newaxis] * _t2x[np.newaxis, :]) ** 0.4  # dark centre, light all edges
+            _arr = np.zeros((box_height, box_width, 4), dtype=np.uint8)
+            for _c in range(3):
+                _arr[:, :, _c] = np.clip(_box_edge[_c] + (_box_mid[_c] - _box_edge[_c]) * _t2, 0, 255).astype(np.uint8)
+            _arr[:, :, 3] = mask_fill
+            box = Image.fromarray(_arr, 'RGBA')
         else:
             box = Image.new("RGBA", (box_width, box_height))
             mask_fill = 130

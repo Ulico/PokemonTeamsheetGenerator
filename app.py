@@ -52,7 +52,7 @@ if team_data:
                 create_teamsheet(team, output_image_path)
 
                 if output_image_path.exists():
-                    st.image(Image.open(output_image_path), caption="Generated Teamsheet", width="stretch")
+                    st.image(Image.open(output_image_path), caption="Generated Teamsheet", use_container_width=True)
 
                     with output_image_path.open("rb") as file:
                         st.download_button(
