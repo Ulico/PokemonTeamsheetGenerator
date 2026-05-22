@@ -6,8 +6,8 @@ Number,Name,Type 1,Type 2
 4,Charmander,Fire,
 5,Charmeleon,Fire,
 6,Charizard,Fire,Flying
-6_01,Charizard X-Mega,Fire,Dragon
-6_02,Charizard Y-Mega,Fire,Flying
+6_01,Charizard-Mega-X,Fire,Dragon
+6_02,Charizard-Mega-Y,Fire,Flying
 7,Squirtle,Water,
 8,Wartortle,Water,
 9,Blastoise,Water,
@@ -202,8 +202,8 @@ Number,Name,Type 1,Type 2
 149,Dragonite,Dragon,Flying
 149_01,Dragonite-Mega,Dragon,Flying
 150,Mewtwo,Psychic,
-150_01,Mewtwo X-Mega,Psychic,Fighting
-150_02,Mewtwo Y-Mega,Psychic,
+150_01,Mewtwo-Mega-X,Psychic,Fighting
+150_02,Mewtwo-Mega-Y,Psychic,
 151,Mew,Psychic,
 152,Chikorita,Grass,
 153,Bayleef,Grass,
