@@ -442,7 +442,8 @@ def create_pokemon_graphic(pokemon, image, scale=0.85):
     client = pokepy.V2Client()
     try:
         for move in pokemon.moves:
-            move_data = client.get_move(move.lower().replace(' ', '-'))[0]
+            move_slug = move.lower().replace(' ', '-').replace("'", "")
+            move_data = client.get_move(move_slug)[0]
             move_types.append((move, move_data.type.name))
     except Exception as e:
         print(f"Error fetching move types: {e}")
